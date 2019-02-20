@@ -28,7 +28,7 @@
             (define-key map (kbd "C-c C-b") 'windmove-left)
 	    ;; Helm
 	    (with-eval-after-load 'helm
-	      (define-key 'helm-map (kbd "C-t") 'helm-previous-line))
+	      (define-key helm-map (kbd "C-t") 'helm-previous-line))
             map))
 
 (define-globalized-minor-mode global-dvorak-mode dvorak-mode
