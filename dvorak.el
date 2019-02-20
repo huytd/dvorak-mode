@@ -15,12 +15,15 @@
   :keymap (let ((map (make-sparse-keymap)))
             ;; Movement
             (define-key map (kbd "C-h") 'forward-char)
-            (define-kef map (kbd "C-t") 'previous-line)
+            (define-key map (kbd "C-t") 'previous-line)
             ;; Window Navigation
             (define-key map (kbd "C-c C-n") 'windmove-down)
             (define-key map (kbd "C-c C-t") 'windmove-up)
             (define-key map (kbd "C-c C-h") 'windmove-right)
             (define-key map (kbd "C-c C-b") 'windmove-left)
             map))
+
+(define-globalized-minor-mode global-dvorak-mode dvorak-mode
+  (lambda () (dvorak-mode 1)))
 
 (provide 'dvorak-mode)
